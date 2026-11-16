@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MoveLab Milano | Palestra, corsi e personal trainer</title>
+  <meta name="description" content="Palestra a Milano con sala pesi, 12 corsi di gruppo, personal trainer, shop e Bar Fit. Progetto dimostrativo.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="MoveLab Milano | Palestra, corsi e personal trainer">
+  <meta property="og:description" content="Palestra a Milano con sala pesi, 12 corsi di gruppo, personal trainer, shop e Bar Fit. Progetto dimostrativo.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body data-page="home">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- FOTO: img/hero/home.jpg (orizzontale, 2000x1300). Se manca si vede il segnaposto -->
+      <img class="hero-bg" src="img/hero/home.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-home.svg'" alt="Sala pesi di MoveLab Milano con rack e bilancieri" fetchpriority="high">
+      <div class="container hero-inner">
+        <div>
+          <span class="open-pill" id="hero-open"></span>
+          <h1 id="hero-title">Allenati con metodo, ogni giorno.</h1>
+          <p class="hero-sub">Sala pesi, 12 corsi di gruppo, personal trainer certificati e un Bar Fit per recuperare bene. A Milano, aperti dalle 6:30.</p>
+          <div class="hero-ctas">
+            <a href="prenotazioni.html?tipo=prova" class="btn btn-lime"><i data-lucide="calendar-check"></i>Prenota la prova gratuita</a>
+            <a href="corsi.html" class="btn btn-ghost">Scopri i corsi</a>
+          </div>
+        </div>
+        <aside class="board" aria-labelledby="board-title">
+          <div class="board-head"><h2 id="board-title">Oggi in sala</h2><span id="board-day"></span></div>
+          <div id="today-board"></div>
+          <a href="corsi.html#orario" class="board-link link">Orario completo</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sec sec-light" aria-labelledby="why-title">
+      <div class="container">
+        <div class="sec-head"><h2 class="title" id="why-title">Perché scegliere MoveLab</h2><p class="lead" style="max-width:44ch">Tutto quello che serve per allenarti bene, con le stesse persone che ti seguono ogni volta.</p></div>
+        <div class="features" id="features"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-alt" aria-labelledby="courses-title">
+      <div class="container">
+        <div class="sec-head"><div><h2 class="title" id="courses-title">Corsi in evidenza</h2><p class="lead">I più richiesti della settimana. Prenoti il posto online e lo trovi pronto.</p></div><a href="corsi.html" class="btn btn-ink">Tutti i corsi</a></div>
+        <div class="grid grid-3" id="home-courses"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-light sec-tight" aria-label="Offerta del momento">
+      <div class="container" id="home-offer"></div>
+    </section>
+
+    <section class="sec sec-dark" aria-labelledby="pt-title">
+      <div class="container">
+        <div class="sec-head"><div><h2 class="title" id="pt-title">Personal trainer</h2><p class="lead">La prima consulenza è gratuita. Scegli in base a obiettivo, orari e lingua.</p></div><a href="trainer.html" class="btn btn-ghost">Tutti i trainer</a></div>
+        <div class="grid grid-3" id="home-trainers"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-alt" aria-label="Bar Fit ed eventi">
+      <div class="container teasers">
+        <article class="teaser">
+          <h2>Bar Fit</h2>
+          <p>Shake, caffè e pranzi fit preparati al momento. Gli abbonati hanno il 20% di sconto su tutto il menù.</p>
+          <ul class="mini-list" id="bar-list"></ul>
+          <a href="bar.html" class="btn btn-ink">Vedi il menù</a>
+        </article>
+        <article class="teaser dark">
+          <h2>Prossimi eventi</h2>
+          <p>Challenge, workshop e giornate wellness, aperti anche a chi non è iscritto.</p>
+          <ul class="mini-list" id="events-list"></ul>
+          <a href="eventi.html" class="btn btn-ghost">Tutti gli eventi</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec sec-light" aria-labelledby="testi-title">
+      <div class="container">
+        <div class="sec-head"><h2 class="title" id="testi-title">Chi si allena qui</h2>
+          <div class="car-nav"><button class="car-btn" data-car-prev="testi-track" aria-label="Testimonianze precedenti"><i data-lucide="chevron-left"></i></button><button class="car-btn" data-car-next="testi-track" aria-label="Testimonianze successive"><i data-lucide="chevron-right"></i></button></div></div>
+        <div class="track" id="testi-track" aria-label="Testimonianze degli iscritti"></div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="container cta-inner">
+        <div>
+          <h2>Inizia oggi con la tua prova gratuita</h2>
+          <p>Sette giorni per provare sala e corsi, con una consulenza iniziale. Nessun vincolo e nessun pagamento.</p>
+          <div class="hero-ctas">
+            <a href="prenotazioni.html?tipo=prova" class="btn btn-lime"><i data-lucide="calendar-check"></i>Prenota la prova gratuita</a>
+            <a href="abbonamenti.html" class="btn btn-ghost">Confronta gli abbonamenti</a>
+          </div>
+        </div>
+        <ol class="cta-steps" aria-label="Come funziona la prova gratuita">
+          <li><b>1</b><span><strong>Prenoti online</strong><small>Scegli giorno e orario del primo ingresso</small></span></li>
+          <li><b>2</b><span><strong>Consulenza con un trainer</strong><small>Obiettivi, test iniziale e scheda di partenza</small></span></li>
+          <li><b>3</b><span><strong>7 giorni di accesso</strong><small>Sala pesi, cardio e due corsi di gruppo</small></span></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/home.js"></script>
+</body>
+</html>

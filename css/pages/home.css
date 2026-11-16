@@ -1,0 +1,69 @@
+/* Home: hero con lavagna "Oggi in sala", vantaggi, banner offerta, teaser, testimonianze */
+.hero{position:relative;display:grid;align-items:center;background:var(--ink);color:#fff;overflow:hidden;padding:clamp(2rem,4.5vw,3.25rem) 0}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#111 25%,rgba(17,17,17,.55) 65%,rgba(17,17,17,.3))}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.hero .open-pill{margin-bottom:1rem}
+.hero h1{font-size:clamp(2.8rem,6.2vw,5.4rem);font-stretch:62%;line-height:.88;max-width:11ch}
+.hero-sub{font-size:1.08rem;color:#d4d4d4;max-width:46ch;margin:1rem 0 1.4rem}
+.hero .btn-ghost{color:#fff}
+@media (max-width:960px){ .hero-inner{grid-template-columns:1fr} }
+@media (max-height:500px) and (orientation:landscape){ .hero h1{font-size:2.8rem} }
+
+.board{background:rgba(17,17,17,.8);border:1px solid #2c2c2c;border-radius:var(--radius-lg);padding:1.2rem 1.35rem;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.board-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.3rem}
+.board-head h2{font-size:1.7rem}
+.board-head span{color:#9d9d9d;font-size:.88rem}
+.board-row{display:grid;grid-template-columns:4.3rem 1fr auto;gap:1rem;align-items:center;padding:.8rem 0;border-top:1px solid #272727}
+.board-time{font-stretch:66%;font-weight:850;font-size:1.75rem;color:var(--lime);line-height:1}
+.board-name{font-weight:700;line-height:1.25}
+.board-name small{display:block;color:#a3a3a3;font-weight:500;font-size:.84rem}
+.board .spots-bar{background:#2b2b2b}
+.board-row .btn{min-height:40px;padding:.45rem .85rem;font-size:.85rem}
+.board-link{display:inline-flex;margin-top:.8rem;color:#cfcfcf;font-size:.9rem}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border)}
+.feature{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:1.1rem 1.25rem 1.1rem 0;border-bottom:1px solid var(--border)}
+.feature h3{font-size:1.3rem;margin-bottom:.3rem}
+.feature p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){ .features{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .features{grid-template-columns:1fr} .feature{padding-right:0} }
+
+.offer-banner{position:relative;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1.5rem 2rem;align-items:center;padding:clamp(1.3rem,3vw,2rem) clamp(1.3rem,3vw,2.25rem);border-radius:22px;background:var(--dark-band);color:#fff;overflow:hidden;border:1px solid #2C2E33}
+.offer-banner h2{font-size:clamp(2rem,4.5vw,3.2rem);font-stretch:62%;line-height:.9;margin:.5rem 0 .4rem}
+.offer-banner p{color:#c4c7cc;max-width:46ch}
+.offer-banner .hero-ctas{margin-top:1rem}
+.offer-side{display:grid;gap:1rem;justify-items:center;text-align:center}
+.offer-side strong{display:block;margin-bottom:.35rem;font-size:.9rem;color:#c4c7cc}
+.offer-big{font-size:clamp(3.4rem,8vw,5.8rem);padding:.12em .3em .06em;border-radius:18px;transform:rotate(-7deg);box-shadow:0 8px 0 rgba(0,0,0,.35)}
+.offer-banner .countdown div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.offer-slide{animation:fadeIn .5s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.banner-dots{display:flex;gap:.4rem;margin-top:1rem}
+.banner-dots button{width:28px;height:6px;border-radius:3px;border:0;padding:0;background:rgba(255,255,255,.25);cursor:pointer}
+.banner-dots button.active{background:var(--promo)}
+@media (max-width:820px){ .offer-banner{grid-template-columns:1fr} .offer-side{justify-items:start;text-align:left} }
+
+/* due riquadri affiancati: Bar Fit ed Eventi */
+.teasers{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media (max-width:860px){ .teasers{grid-template-columns:1fr} }
+.teaser{display:flex;flex-direction:column;gap:.7rem;padding:clamp(1.4rem,3vw,2rem);border-radius:var(--radius-lg);background:var(--surface);border:1px solid var(--border)}
+.teaser.dark{background:var(--dark-band);color:#fff;border-color:#222;--text:#fff;--muted:#a8a8a8;--border:#2a2a2a}
+.teaser h2{font-size:clamp(2rem,4vw,2.8rem)}
+.teaser p{color:var(--muted)}
+.mini-list li{display:grid;grid-template-columns:auto 1fr auto;gap:.9rem;align-items:center;padding:.8rem 0;border-top:1px solid var(--border)}
+.mini-list li>span:nth-child(2){font-weight:700;line-height:1.25}
+.mini-list small{display:block;color:var(--muted);font-weight:500;font-size:.84rem}
+.mini-list b{font-stretch:70%;font-size:1.25rem}
+.mini-date{display:grid;justify-items:center;min-width:52px;padding:.35rem;border-radius:10px;background:var(--lime);color:var(--ink);line-height:1}
+.mini-date strong{font-stretch:62%;font-size:1.5rem}
+.mini-date small{color:var(--ink)!important;font-size:.7rem!important;font-weight:700!important}
+.mini-thumb{width:52px;height:52px;border-radius:10px;object-fit:cover;background:var(--chip)}
+.teaser .btn{align-self:flex-start;margin-top:auto}
+
+/* Testimonianze: card affiancate, 3 per volta su desktop */
+.testi-card{display:flex;flex-direction:column;gap:.7rem;padding:1.2rem 1.25rem;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);scroll-snap-align:start}
+.testi-card blockquote{font-size:1rem;line-height:1.45;flex:1}
+.testi-who{display:flex;align-items:center;gap:.7rem}
+.avatar{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--ink);font-weight:850;font-stretch:70%;font-size:1.1rem;flex:none}
+.testi-who small{display:block;color:var(--muted);font-size:.84rem}

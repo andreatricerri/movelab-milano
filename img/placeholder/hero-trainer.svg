@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18191C"/><stop offset="1" stop-color="#25272B"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<rect x="216" y="335" width="1080" height="33" rx="16" fill="#33363B"/>
+<g fill="none" stroke="#33363B" stroke-width="20"><circle cx="792" cy="351" r="222"/><circle cx="792" cy="351" r="128"/></g>
+<circle cx="792" cy="351" r="37" fill="#33363B"/>
+<g fill="none" stroke="#33363B" stroke-width="13"><circle cx="432" cy="351" r="155"/></g>
+<g fill="#B5E33A"><rect x="1032" y="-60" width="30" height="405" transform="rotate(30 1032 0)"/><rect x="1104" y="-60" width="30" height="405" transform="rotate(30 1104 0)"/></g>
+<rect x="48" y="580" width="273" height="40" rx="20" fill="#111" opacity=".85"/>
+<text x="68" y="607" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#B5E33A">Foto: personal training</text>
+</svg>

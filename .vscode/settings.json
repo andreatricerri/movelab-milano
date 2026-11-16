@@ -1,0 +1,9 @@
+{
+  // Live Server raggiungibile anche da telefono e tablet sulla stessa rete Wi-Fi
+  "liveServer.settings.host": "0.0.0.0",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.useLocalIp": true,
+  "liveServer.settings.root": "/",
+  "files.eol": "\n",
+  "editor.tabSize": 2
+}

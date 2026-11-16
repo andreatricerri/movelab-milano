@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Offerte | MoveLab Milano</title>
+  <meta name="description" content="Promozioni MoveLab Milano: Black Friday, Natale, nuovo anno e promo stagionali con countdown.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Offerte | MoveLab Milano">
+  <meta property="og:description" content="Promozioni MoveLab Milano: Black Friday, Natale, nuovo anno e promo stagionali con countdown.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/offerte.css">
+</head>
+<body data-page="offerte">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero ">
+      <!-- FOTO: img/hero/offerte.jpg (16:9, 1600x900). Se manca si vede il segnaposto -->
+      <figure class="page-hero-media"><img src="img/hero/offerte.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-offerte.svg'" alt="Banner promozionale delle offerte stagionali" width="1600" height="900" fetchpriority="high"></figure>
+      <div class="container page-hero-inner">
+        <div class="page-hero-text">
+          <nav class="crumbs" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Offerte</span></nav>
+          <h1>Offerte e promozioni</h1>
+          <p class="lead">Le promo dell’anno in un solo posto. Quelle in arrivo mostrano quanto manca all’apertura.</p>
+          <ul class="hero-points"><li><i data-lucide="check"></i>Codici da usare nel carrello</li><li><i data-lucide="check"></i>Countdown sulle promo a tempo</li></ul>
+        </div>
+      </div>
+    </header>
+    <section class="sec sec-light">
+      <div class="container">
+        <div class="filters offer-filters">
+          <div class="field"><span class="label">Stato</span><div class="chips" id="offer-status"></div></div>
+          <div class="field"><label for="fo-scope">Valida per</label><select id="fo-scope"><option value="">Tutto</option></select></div>
+        </div>
+        <div class="results-bar"><span id="offers-count" aria-live="polite"></span></div>
+        <div class="grid grid-3" id="offers-grid"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/offerte.js"></script>
+</body>
+</html>

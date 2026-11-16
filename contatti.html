@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contatti | MoveLab Milano</title>
+  <meta name="description" content="Contatta MoveLab Milano: modulo, recapiti, orari e domande frequenti.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Contatti | MoveLab Milano">
+  <meta property="og:description" content="Contatta MoveLab Milano: modulo, recapiti, orari e domande frequenti.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/contatti.css">
+</head>
+<body data-page="contatti">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero ">
+      <!-- FOTO: img/hero/contatti.jpg (16:9, 1600x900). Se manca si vede il segnaposto -->
+      <figure class="page-hero-media"><img src="img/hero/contatti.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-contatti.svg'" alt="Reception di MoveLab con bancone e area d’attesa" width="1600" height="900" fetchpriority="high"></figure>
+      <div class="container page-hero-inner">
+        <div class="page-hero-text">
+          <nav class="crumbs" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contatti</span></nav>
+          <h1>Parliamone</h1>
+          <p class="lead">Informazioni, convenzioni aziendali o feedback: rispondiamo entro un giorno lavorativo.</p>
+          <ul class="hero-points"><li><i data-lucide="check"></i>Risposta entro un giorno lavorativo</li><li><i data-lucide="check"></i>Aperti 7 giorni su 7</li></ul>
+        </div>
+      </div>
+    </header>
+    <nav class="subnav" aria-label="Sezioni della pagina"><div class="container"><a href="#scrivici">Scrivici</a><a href="#faq">Domande frequenti</a></div></nav>
+    <section class="sec sec-light" id="scrivici">
+      <div class="container">
+        <div class="info-cards" id="contact-info"></div>
+        <div class="contact-row">
+          <div class="panel">
+            <h2 class="title" style="font-size:2.2rem;margin-bottom:1.1rem">Scrivici</h2>
+            <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="field"><label for="ct-name">Nome e cognome *</label><input id="ct-name" name="name" autocomplete="name"><span class="err"></span></div>
+              <div class="field"><label for="ct-email">Email *</label><input id="ct-email" name="email" type="email" inputmode="email" autocomplete="email"><span class="err"></span></div>
+              <div class="field"><label for="ct-phone">Telefono</label><input id="ct-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Facoltativo"><span class="err"></span></div>
+              <div class="field"><label for="ct-subject">Argomento *</label><select id="ct-subject" name="subject"><option value="">Scegli…</option><option>Informazioni generali</option><option>Abbonamenti</option><option>Abbonamento Corporate</option><option>Personal trainer</option><option>Shop e Bar Fit</option><option>Eventi</option><option>Altro</option></select><span class="err"></span></div>
+              <div class="field full"><label for="ct-msg">Messaggio *</label><textarea id="ct-msg" name="message" maxlength="800"></textarea><span class="err"></span></div>
+              <label class="check full"><input type="checkbox" name="privacy">Ho letto l’informativa privacy (testo dimostrativo).</label>
+              <span class="err full" data-err="privacy" role="alert"></span>
+            </div>
+            <div class="demo-note" style="margin:1rem 0"><i data-lucide="shield-check"></i><span>Modulo dimostrativo: il messaggio non viene inviato né salvato.</span></div>
+            <button class="btn btn-lime" type="submit"><i data-lucide="send"></i>Invia il messaggio</button>
+          </form>
+          <div id="contact-result" hidden></div>
+          </div>
+          <div class="panel" style="padding:.75rem">
+            <!-- SOSTITUISCI: qui puoi incorporare una mappa reale (iframe) -->
+            <div class="map fill" role="img" aria-label="Mappa illustrativa della zona con la posizione di MoveLab">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="400" height="300" fill="#1c1c1c"/>
+                <g stroke="#2f2f2f" stroke-width="14" fill="none"><path d="M-10 90 H410"/><path d="M-10 210 H410"/><path d="M120 -10 V310"/><path d="M290 -10 V310"/></g>
+                <g stroke="#3a3a3a" stroke-width="5" fill="none"><path d="M-10 150 H410"/><path d="M60 -10 V310"/><path d="M210 -10 V310"/><path d="M350 -10 V310"/><path d="M0 300 L400 0"/></g>
+                <rect x="135" y="230" width="140" height="60" rx="8" fill="#22381a"/>
+              </svg>
+              <div class="map-pin"><span>MoveLab Milano</span><b><i data-lucide="dumbbell"></i></b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-alt" id="faq">
+      <div class="container split">
+        <div class="sec-head" style="grid-column:1/-1"><h2 class="title">Domande frequenti</h2><p class="lead" style="max-width:44ch">Le risposte alle domande che riceviamo più spesso in reception.</p></div>
+        <div class="faq" id="faq-list" style="grid-column:1/-1"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/contatti.js"></script>
+</body>
+</html>

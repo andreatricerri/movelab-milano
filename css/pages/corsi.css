@@ -1,0 +1,4 @@
+/* Corsi: schede giorni dell'orario settimanale */
+.day-tabs{display:flex;gap:.45rem;overflow-x:auto;padding-bottom:.6rem;margin-bottom:1.2rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.day-tabs .chip{flex:none}
+.day-tabs .chip small{font-weight:500;opacity:.7}

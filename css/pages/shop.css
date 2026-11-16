@@ -1,0 +1,27 @@
+/* Shop: barra filtri compatta su una riga, card prodotto, scelta taglia */
+.shop-toolbar{display:flex;justify-content:space-between;align-items:center;gap:.9rem 1.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.shop-controls{display:flex;gap:.6rem;flex:0 1 480px}
+.shop-controls .field{flex:1;min-width:0}
+.shop-controls .search-field svg,.shop-controls .search-field i{bottom:auto;top:50%;transform:translateY(-50%)}
+@media (max-width:700px){ .shop-controls{flex-basis:100%} }
+.product .card-media{aspect-ratio:4/3;background:var(--chip)}
+.product h3{font-size:1.2rem}
+.size-picker{display:flex;flex-wrap:wrap;gap:.4rem}
+.size-picker label{cursor:pointer;position:relative}
+.size-picker input{position:absolute;opacity:0;pointer-events:none}
+.size-picker span{display:grid;place-items:center;min-width:48px;height:44px;padding:0 .6rem;border-radius:10px;border:1.5px solid var(--border);font-weight:700}
+.size-picker input:checked+span{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.size-picker input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+/* striscia "I più acquistati" */
+.mini-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3 * .9rem) / 4);gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.3rem;-webkit-overflow-scrolling:touch}
+.mini-track::-webkit-scrollbar{display:none}
+@media (max-width:1024px){ .mini-track{grid-auto-columns:calc((100% - .9rem) / 2)} }
+@media (max-width:560px){ .mini-track{grid-auto-columns:88%} }
+.mini-product{scroll-snap-align:start;display:grid;grid-template-columns:72px minmax(0,1fr);gap:.8rem;align-items:center;padding:.7rem;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border)}
+.mini-product img{width:72px;height:72px;border-radius:12px;object-fit:cover;background:var(--chip)}
+.mini-product h3{font-size:1rem;line-height:1.2;cursor:pointer}
+.mini-product .mp-row{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-top:.35rem}
+.mini-product .mp-row b{font-stretch:70%;font-size:1.2rem}
+.mini-product .icon-add{width:36px;height:36px;border-radius:50%;border:0;background:var(--lime);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
+.best-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.9rem}
+.best-head h2{font-size:1.6rem}

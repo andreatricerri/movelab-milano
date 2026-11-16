@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shop | MoveLab Milano</title>
+  <meta name="description" content="Integratori e abbigliamento MoveLab: ordina online e ritira in reception. Demo senza pagamenti reali.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Shop | MoveLab Milano">
+  <meta property="og:description" content="Integratori e abbigliamento MoveLab: ordina online e ritira in reception. Demo senza pagamenti reali.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/shop.css">
+</head>
+<body data-page="shop">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero ">
+      <!-- FOTO: img/hero/shop.jpg (16:9, 1600x900). Se manca si vede il segnaposto -->
+      <figure class="page-hero-media"><img src="img/hero/shop.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-shop.svg'" alt="Scaffali dello shop con integratori e abbigliamento tecnico" width="1600" height="900" fetchpriority="high"></figure>
+      <div class="container page-hero-inner">
+        <div class="page-hero-text">
+          <nav class="crumbs" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Shop</span></nav>
+          <h1>Integratori e abbigliamento</h1>
+          <p class="lead">Ordina online e ritira in reception. Linea MoveLab Nutrition e MoveLab Wear.</p>
+          <ul class="hero-points"><li><i data-lucide="check"></i>Ritiro gratuito in reception</li><li><i data-lucide="check"></i>−20% per gli abbonati</li></ul>
+        </div>
+      </div>
+    </header>
+    <section class="sec sec-alt sec-tight" id="bestseller" aria-labelledby="best-title">
+      <div class="container">
+        <div class="best-head"><h2 id="best-title">I più acquistati</h2>
+          <div class="car-nav"><button class="car-btn" data-car-prev="best-track" aria-label="Prodotti precedenti"><i data-lucide="chevron-left"></i></button><button class="car-btn" data-car-next="best-track" aria-label="Prodotti successivi"><i data-lucide="chevron-right"></i></button></div></div>
+        <div class="mini-track" id="best-track"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-light" id="catalogo">
+      <div class="container">
+        <div class="member-banner" id="member-banner"></div>
+        <div class="shop-toolbar">
+          <div class="chips" id="shop-cats" role="group" aria-label="Categoria e offerte"></div>
+          <div class="shop-controls">
+            <div class="field search-field"><label for="fs-q" class="visually-hidden">Cerca un prodotto</label><input type="search" id="fs-q" placeholder="Cerca un prodotto"><i data-lucide="search"></i></div>
+            <div class="field"><label for="fs-sort" class="visually-hidden">Ordina per</label><select id="fs-sort"><option value="rel">In evidenza</option><option value="pa">Prezzo crescente</option><option value="pd">Prezzo decrescente</option><option value="rate">Più votati</option></select></div>
+          </div>
+        </div>
+        <div class="results-bar"><span id="shop-count" aria-live="polite"></span><button class="link" data-reset="shop">Azzera i filtri</button></div>
+        <div class="grid grid-4" id="shop-grid"></div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/shop.js"></script>
+</body>
+</html>

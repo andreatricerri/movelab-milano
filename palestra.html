@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>La palestra | MoveLab Milano</title>
+  <meta name="description" content="Gli spazi di MoveLab Milano: sala pesi, cardio, area funzionale, galleria, orari e come raggiungerci.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="La palestra | MoveLab Milano">
+  <meta property="og:description" content="Gli spazi di MoveLab Milano: sala pesi, cardio, area funzionale, galleria, orari e come raggiungerci.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/palestra.css">
+</head>
+<body data-page="palestra">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero ">
+      <!-- FOTO: img/hero/palestra.jpg (16:9, 1600x900). Se manca si vede il segnaposto -->
+      <figure class="page-hero-media"><img src="img/hero/palestra.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-palestra.svg'" alt="Sala pesi con file di manubri e panche regolabili" width="1600" height="900" fetchpriority="high"></figure>
+      <div class="container page-hero-inner">
+        <div class="page-hero-text">
+          <nav class="crumbs" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Palestra</span></nav>
+          <h1>1.400 m² per allenarti come vuoi</h1>
+          <p class="lead">Otto aree dedicate, attrezzature rinnovate nel 2026 e spazi ampi anche nelle ore di punta.</p>
+          <ul class="hero-points"><li><i data-lucide="check"></i>8 aree su 1.400 m²</li><li><i data-lucide="check"></i>Aperti 7 giorni su 7</li><li><i data-lucide="check"></i>Trainer sempre in sala</li></ul>
+        <div class="hero-ctas"><a href="prenotazioni.html?tipo=visita" class="btn btn-lime"><i data-lucide="map-pin"></i>Prenota una visita gratuita</a></div>
+        </div>
+      </div>
+    </header>
+    <nav class="subnav" aria-label="Sezioni della pagina"><div class="container"><a href="#spazi">Gli spazi</a><a href="#galleria">Galleria</a><a href="#orari">Orari e servizi</a><a href="#dove">Dove siamo</a></div></nav>
+    <section class="sec sec-light" id="spazi">
+      <div class="container">
+        <div class="split" style="margin-bottom:3rem">
+          <h2 class="title">Una palestra di quartiere, con attrezzature da centro sportivo</h2>
+          <div>
+            <p class="lead">MoveLab nasce nel 2019 da un gruppo di allenatori che voleva un posto senza code agli attrezzi e con istruttori sempre presenti in sala. Ogni area ha un trainer di riferimento.</p>
+            <div class="facts">
+              <div><b class="num">1.400 m²</b><span>su due livelli</span></div>
+              <div><b class="num">90+</b><span>lezioni a settimana</span></div>
+              <div><b class="num">7</b><span>personal trainer</span></div>
+              <div><b class="num">6:30</b><span>apertura nei feriali</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="areas" id="gym-areas"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-alt" id="galleria">
+      <div class="container">
+        <div class="sec-head"><div><h2 class="title">Galleria</h2><p class="lead">Tocca una foto per ingrandirla. Scorri con le frecce o con il dito.</p></div></div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark" id="orari">
+      <div class="container equal-cols">
+        <div class="panel-box">
+          <h2>Orari di apertura</h2>
+          <p class="open-pill" id="gym-open" style="margin-bottom:.6rem;align-self:flex-start"></p>
+          <ul class="hours" id="hours-list"></ul>
+          <p class="panel-foot card-text">Festivi 9:00–13:00. Chiusi il 25 dicembre e il 1° gennaio.</p>
+        </div>
+        <div class="panel-box">
+          <h2>Servizi inclusi</h2>
+          <ul class="check-list" id="services-list"></ul>
+          <div class="panel-foot">
+            <div class="extra-box">
+              <strong>Su richiesta</strong>
+              <p>Personal trainer, armadietto riservato e Bar Fit con il 20% di sconto per gli abbonati.</p>
+              <a href="prenotazioni.html?tipo=visita" class="btn btn-lime btn-sm"><i data-lucide="map-pin"></i>Prenota una visita</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-light" id="dove">
+      <div class="container split">
+        <div>
+          <h2 class="title">Dove siamo</h2>
+          <p class="lead" style="margin:1rem 0 1rem">Viale dell'Energia 18, 20141 Milano <small>(indirizzo fittizio)</small></p>
+          <ul class="info-list" id="reach-list"></ul>
+        </div>
+        <!-- SOSTITUISCI: qui puoi incorporare una mappa reale (iframe) -->
+        <div class="map" role="img" aria-label="Mappa illustrativa della zona con la posizione di MoveLab">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="300" fill="#1c1c1c"/>
+            <g stroke="#2f2f2f" stroke-width="14" fill="none"><path d="M-10 90 H410"/><path d="M-10 210 H410"/><path d="M120 -10 V310"/><path d="M290 -10 V310"/></g>
+            <g stroke="#3a3a3a" stroke-width="5" fill="none"><path d="M-10 150 H410"/><path d="M60 -10 V310"/><path d="M210 -10 V310"/><path d="M350 -10 V310"/><path d="M0 300 L400 0"/></g>
+            <rect x="135" y="230" width="140" height="60" rx="8" fill="#22381a"/>
+            <circle cx="300" cy="95" r="9" fill="#0B1F3A" stroke="#C6FF00" stroke-width="3"/>
+          </svg>
+          <div class="map-pin"><span>MoveLab Milano</span><b><i data-lucide="dumbbell"></i></b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/palestra.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Abbonamenti | MoveLab Milano</title>
+  <meta name="description" content="Abbonamenti MoveLab: prova gratuita, mensile, trimestrale, annuale, studenti e corporate. Confronto e promo.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Abbonamenti | MoveLab Milano">
+  <meta property="og:description" content="Abbonamenti MoveLab: prova gratuita, mensile, trimestrale, annuale, studenti e corporate. Confronto e promo.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/abbonamenti.css">
+</head>
+<body data-page="abbonamenti">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero ">
+      <!-- FOTO: img/hero/abbonamenti.jpg (16:9, 1600x900). Se manca si vede il segnaposto -->
+      <figure class="page-hero-media"><img src="img/hero/abbonamenti.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-abbonamenti.svg'" alt="Area cardio con tapis roulant affacciati sulle vetrate" width="1600" height="900" fetchpriority="high"></figure>
+      <div class="container page-hero-inner">
+        <div class="page-hero-text">
+          <nav class="crumbs" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Abbonamenti</span></nav>
+          <h1>Scegli il piano giusto</h1>
+          <p class="lead">Nessuna quota nascosta. Tutti i piani a pagamento includono il 20% di sconto su Shop e Bar Fit.</p>
+          <ul class="hero-points"><li><i data-lucide="check"></i>Prova gratuita di 7 giorni</li><li><i data-lucide="check"></i>Da 39 € al mese</li><li><i data-lucide="check"></i>−20% su Shop e Bar Fit</li></ul>
+        </div>
+      </div>
+    </header>
+    <nav class="subnav" aria-label="Sezioni della pagina"><div class="container"><a href="#piani">Piani</a><a href="#confronto">Confronto</a><a href="#promo">Promo</a></div></nav>
+    <section class="sec sec-light" id="piani">
+      <div class="container"><div class="plans" id="plans-grid"></div></div>
+    </section>
+
+    <section class="sec sec-light" id="confronto">
+      <div class="container">
+        <div class="sec-head"><div><h2 class="title">Confronta i piani</h2></div></div>
+        <p class="scroll-hint"><i data-lucide="move-horizontal"></i>Scorri la tabella di lato</p>
+        <div class="table-wrap"><table class="compare" id="compare-table"><caption class="visually-hidden">Confronto tra gli abbonamenti MoveLab</caption></table></div>
+      </div>
+    </section>
+
+    <section class="sec sec-alt" id="promo">
+      <div class="container">
+        <div class="sec-head"><div><h2 class="title">Promo nuovi abbonamenti</h2><p class="lead">Inserisci il codice nel carrello prima del checkout. Le promo non sono cumulabili.</p></div><a href="offerte.html" class="btn btn-ink">Tutte le offerte</a></div>
+        <div class="promo-grid" id="promo-grid"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/abbonamenti.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* Contatti: form, recapiti, FAQ */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 2.5rem;align-items:start}
+@media (max-width:860px){ .faq{grid-template-columns:1fr} }
+.faq-col{min-width:0}
+.contact-row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:1.25rem;align-items:stretch}
+@media (max-width:900px){ .contact-row{grid-template-columns:1fr} .contact-row .map{min-height:220px} }
+.contact-row .panel{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item h3{font:inherit;letter-spacing:normal}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:1.1rem 0;background:none;border:0;color:inherit;text-align:left;font-weight:700;font-size:1.08rem;cursor:pointer}
+.faq-ico{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--chip);flex:none;transition:transform .25s,background-color .25s}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--lime);color:var(--ink)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a>div{overflow:hidden}
+.faq-item:not(.open) .faq-a>div{visibility:hidden}
+.faq-a p{padding:0 3rem 1.2rem 0;color:var(--muted)}
+@media (max-width:600px){ .faq-a p{padding-right:0} }

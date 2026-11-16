@@ -1,0 +1,4 @@
+/* Prenotazioni: elenco prenotazioni della sessione */
+.my-bookings{display:grid;gap:.7rem}
+.my-booking{display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:center;padding:1rem;border-radius:14px;border:1px solid var(--border);background:var(--bg)}
+.my-booking small{display:block;color:var(--muted)}

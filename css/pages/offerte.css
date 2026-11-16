@@ -1,0 +1,7 @@
+/* Offerte: fascia scura con sticker dello sconto */
+.offer-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.1rem .9rem;color:#fff}
+.offer-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.1);font-size:1.3rem}
+.offer-card.is-ended{filter:grayscale(.85);opacity:.75}
+.offer-filters{grid-template-columns:1fr minmax(180px,240px);align-items:end}
+@media (max-width:640px){ .offer-filters{grid-template-columns:1fr} }
+.offer-meta{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap;font-size:.86rem;color:var(--muted)}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Configurazione per tutti i dispositivi: larghezza reale, zoom consentito, aree sicure di iPhone con notch -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Personal trainer | MoveLab Milano</title>
+  <meta name="description" content="Sette personal trainer per dimagrimento, forza, riabilitazione, running e mobilità. Prima consulenza gratuita.">
+  <meta name="theme-color" content="#111111">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MoveLab">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Personal trainer | MoveLab Milano">
+  <meta property="og:description" content="Sette personal trainer per dimagrimento, forza, riabilitazione, running e mobilità. Prima consulenza gratuita.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/trainer.css">
+</head>
+<body data-page="trainer">
+  <a href="#main" class="skip-link">Vai al contenuto</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <header class="page-hero ">
+      <!-- FOTO: img/hero/trainer.jpg (16:9, 1600x900). Se manca si vede il segnaposto -->
+      <figure class="page-hero-media"><img src="img/hero/trainer.jpg" onerror="this.onerror=null;this.src='img/placeholder/hero-trainer.svg'" alt="Sessione di personal training in sala pesi" width="1600" height="900" fetchpriority="high"></figure>
+      <div class="container page-hero-inner">
+        <div class="page-hero-text">
+          <nav class="crumbs" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Personal trainer</span></nav>
+          <h1>Un trainer per il tuo obiettivo</h1>
+          <p class="lead">Dimagrimento, forza, rientro dopo un infortunio o una gara di corsa: scegli chi ha esperienza proprio su quello.</p>
+          <ul class="hero-points"><li><i data-lucide="check"></i>Prima consulenza gratuita</li><li><i data-lucide="check"></i>Da 45 € a sessione</li><li><i data-lucide="check"></i>6 lingue parlate</li></ul>
+        </div>
+      </div>
+    </header>
+    <nav class="subnav" aria-label="Sezioni della pagina"><div class="container"><a href="#trainer-elenco">I trainer</a><a href="#percorso">Come funziona</a></div></nav>
+    <section class="sec sec-light" id="trainer-elenco">
+      <div class="container">
+        <div class="filters" aria-label="Filtra i personal trainer">
+          <div class="field"><label for="ft-spec">Specializzazione</label><select id="ft-spec"><option value="">Tutte</option></select></div>
+          <div class="field"><label for="ft-slot">Fascia oraria</label><select id="ft-slot"><option value="">Tutte</option><option value="mattina">Mattina</option><option value="pomeriggio">Pomeriggio</option><option value="sera">Sera</option></select></div>
+          <div class="field"><label for="ft-day">Giorno</label><select id="ft-day"><option value="">Tutti</option></select></div>
+          <div class="field"><label for="ft-price">Prezzo massimo: <output id="ft-price-out"></output></label><input type="range" id="ft-price" step="5"></div>
+          <div class="field"><label for="ft-lang">Lingua</label><select id="ft-lang"><option value="">Tutte</option></select></div>
+          <div class="field"><label for="ft-status">Disponibilità</label><select id="ft-status"><option value="">Tutte</option><option>Disponibile</option><option>Pochi slot</option><option>Non disponibile</option></select></div>
+        </div>
+        <div class="results-bar"><span id="trainers-count" aria-live="polite"></span><button class="link" data-reset="trainers">Azzera i filtri</button></div>
+        <div class="grid" id="trainers-grid"></div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark" id="percorso">
+      <div class="container">
+        <div class="sec-head"><div><h2 class="title">Come funziona il percorso</h2></div><a href="prenotazioni.html?tipo=pt" class="btn btn-lime">Prenota la consulenza gratuita</a></div>
+        <ol class="steps" id="pt-steps"></ol>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <!-- Icone (opzionali: offline il sito funziona senza) -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <!-- Script comuni: l'ordine è importante -->
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/components.js"></script>
+  <!-- Script di questa pagina -->
+  <script src="js/pages/trainer.js"></script>
+</body>
+</html>

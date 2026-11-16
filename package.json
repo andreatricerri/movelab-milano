@@ -1,0 +1,10 @@
+{
+  "name": "movelab-milano",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Sito statico dimostrativo per una palestra fittizia. HTML, CSS e JavaScript vanilla.",
+  "scripts": {
+    "dev": "npx --yes serve@14 . -l 3000",
+    "start": "npx --yes serve@14 . -l 3000"
+  }
+}

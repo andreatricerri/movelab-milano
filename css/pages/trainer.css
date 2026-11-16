@@ -1,0 +1,6 @@
+/* Personal trainer: percorso in 6 passi */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1.5rem}
+.step{padding-top:1rem;border-top:3px solid var(--lime)}
+.step-n{display:block;font-stretch:62%;font-weight:900;font-size:3rem;line-height:1;color:var(--lime);margin-bottom:.5rem}
+.step h3{font-size:1.25rem;margin-bottom:.4rem}
+.step p{color:var(--muted);font-size:.93rem}
