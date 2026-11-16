@@ -144,29 +144,38 @@ h3{font-size:1.4rem;line-height:1.05}
   .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translate(-50%,0)}
   .nav-item:hover .chev{transform:rotate(180deg)}
 }
-/* tablet e smartphone: menu a pannello con sezioni a fisarmonica */
+/* tablet e smartphone: menu a pannello a tutto schermo, con TUTTE le sezioni già aperte */
 @media (max-width:1180px){
+  /* l'effetto sfocato dell'header farebbe misurare il pannello sull'header (iPhone): qui sfondo pieno */
+  .site-header{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--ink)}
   .hamburger{display:grid}
   .nav-actions{margin-left:auto}
-  .nav-menu{position:fixed;top:calc(var(--header-h) + var(--safe-top));left:0;right:0;bottom:0;margin:0;flex-direction:column;align-items:stretch;gap:0;padding:.5rem calc(1.25rem + var(--safe-right)) calc(2rem + var(--safe-bottom)) calc(1.25rem + var(--safe-left));background:var(--ink);overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);visibility:hidden;transition:transform .3s ease,visibility .3s}
+  .nav-menu{position:fixed;top:calc(var(--header-h) + var(--safe-top));left:0;right:0;bottom:0;height:calc(100vh - var(--header-h) - var(--safe-top));height:calc(100dvh - var(--header-h) - var(--safe-top));margin:0;
+    display:grid;grid-template-columns:1fr 1fr;align-content:start;gap:.35rem .5rem;
+    padding:.75rem calc(1rem + var(--safe-right)) calc(1.25rem + var(--safe-bottom)) calc(1rem + var(--safe-left));
+    background:var(--ink);overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);visibility:hidden;transition:transform .3s ease,visibility .3s}
   .nav-menu.open{transform:none;visibility:visible}
-  .nav-item{border-bottom:1px solid #262626}
-  .nav-link{width:100%;justify-content:space-between;min-height:56px;padding:.9rem .25rem;border-radius:0;font-size:1.35rem;font-stretch:75%;font-weight:800}
-  .nav-link:hover,.nav-item.open>.nav-link{background:none}
-  .dropdown{position:static;width:auto;padding:0;opacity:1;visibility:visible;transform:none;background:none;color:#fff;border:0;border-radius:0;box-shadow:none;display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+  /* gruppi con sottovoci: titolo + voci a due colonne, sempre visibili */
+  .nav-item{grid-column:1/-1}
+  .nav-link[data-dd]{width:100%;min-height:0;padding:.55rem .1rem .3rem;border-radius:0;justify-content:flex-start;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8f949b;pointer-events:none;background:none}
+  .nav-link[data-dd].active{color:var(--lime)}
+  .nav-link[data-dd] .chev{display:none}
+  .dropdown{position:static;width:auto;padding:0;opacity:1;visibility:visible;transform:none;background:none;color:#fff;border:0;border-radius:0;box-shadow:none;display:block}
   .dropdown::before{display:none}
-  .nav-item.open .dropdown{grid-template-rows:1fr;transform:none}
-  .dd-inner{overflow:hidden}
-  .nav-item:not(.open) .dd-inner{visibility:hidden}
-  .dd-inner{padding-bottom:.25rem}
-  .nav-item.open .dd-inner{padding-bottom:.75rem}
-  .dd-link{color:#e6e6e6}
-  .dd-link:hover,.dd-link.current{background:#1b1b1b}
-  .dd-link small{color:#9a9a9a}
-  .dd-icon{background:#1f1f1f}
-  .nav-mobile-extra{display:grid;gap:.75rem;padding-top:1.5rem;border-bottom:0!important}
-  .nav-mobile-extra p{color:#9a9a9a;font-size:.9rem}
+  .dd-inner{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+  .dd-link{grid-template-columns:30px 1fr;gap:.55rem;min-height:50px;padding:.5rem .6rem;border-radius:12px;background:#1b1c1f;border:1px solid #2a2c30;color:#f2f2f2}
+  .dd-link:hover,.dd-link.current{background:#23252a;border-color:var(--lime)}
+  .dd-link strong{font-size:.92rem;line-height:1.2}
+  .dd-link small{display:none}
+  .dd-icon{width:30px;height:30px;border-radius:8px;background:#26282d;font-size:.9rem}
+  /* voci singole (Eventi, Contatti): affiancate */
+  .nav-item:has(> a.nav-link){grid-column:auto;margin-top:.6rem}
+  .nav-item > a.nav-link{width:100%;justify-content:center;min-height:50px;border-radius:12px;background:#1b1c1f;border:1px solid #2a2c30;font-size:.95rem;font-weight:700;color:#f2f2f2}
+  .nav-item > a.nav-link.active{border-color:var(--lime);color:var(--lime)}
+  .nav-mobile-extra{display:grid;gap:.5rem;grid-column:1/-1;padding-top:.75rem}
+  .nav-mobile-extra p{color:#9a9a9a;font-size:.85rem;text-align:center}
 }
+@media (max-width:340px){ .dd-inner{grid-template-columns:1fr} }
 @media (max-width:560px){ .nav-cta{display:none} .logo small{display:none} }
 
 /* ---------- 7. Intestazione pagine interne e sotto-menu ---------- */
