@@ -86,7 +86,7 @@ In alternativa, senza VS Code: `npm run dev` e apri l'indirizzo **Network** che 
 Il sito è pubblicato su **Netlify** a partire dal repository GitHub: ogni push sul ramo `main` aggiorna il sito online in automatico.
 
 - `netlify.toml`: sito statico senza build, intestazioni di sicurezza e cache. Netlify usa da solo `404.html` per le pagine inesistenti e apre `/corsi` come `corsi.html`.
-- **Dopo ogni modifica a CSS o JS** aggiorna il numero `?v=...` nei link delle pagine HTML (cerca e sostituisci `v=20261117b`): così telefoni e browser scaricano subito i file nuovi.
+- **Dopo ogni modifica a CSS o JS** aggiorna il numero `?v=...` nei link delle pagine HTML (cerca e sostituisci `v=20261117c`): così telefoni e browser scaricano subito i file nuovi.
 - `vercel.json`: configurazione equivalente se un giorno vuoi pubblicare su Vercel.
 
 ## Personalizzare
