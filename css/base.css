@@ -51,7 +51,10 @@ ul,ol{padding:0;list-style:none}
 .skip-link:focus{top:calc(.5rem + var(--safe-top))}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
 i[data-lucide]{display:inline-block;width:1.1em;height:1.1em;flex:none}
-svg.lucide{width:1.1em;height:1.1em;flex:none;stroke-width:2.1}
+svg.lucide{width:1.1em;height:1.1em;min-width:1.1em;max-width:none;flex:none;stroke-width:2.1}
+/* Safari (iPhone): dimensioni fisse per le icone nei pulsanti, altrimenti possono risultare larghe 0 */
+.qty-step svg.lucide,.add-round svg.lucide,.icon-add svg.lucide{width:18px;height:18px;min-width:18px;stroke-width:2.6}
+.icon-btn svg.lucide,.car-btn svg.lucide,.modal-close svg.lucide{width:20px;height:20px;min-width:20px}
 
 /* ---------- 3. Tipografia ---------- */
 h1,h2,h3,h4{font-stretch:72%;font-weight:850;line-height:.95;letter-spacing:-.005em}
@@ -384,7 +387,7 @@ h3{font-size:1.4rem;line-height:1.05}
 .qty span{min-width:1.8rem;text-align:center;font-weight:700}
 /* selettore "− 1 +" sulle card dopo il primo inserimento */
 .qty-step{display:inline-flex;align-items:center;justify-content:space-between;gap:.15rem;height:38px;padding:0 .2rem;border-radius:999px;background:var(--lime);color:var(--ink);flex:none;animation:pop .2s ease}
-.qty-step button{width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.qty-step button{width:34px;height:34px;flex:none;border:0;border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer}
 .qty-step button:hover{background:rgba(17,17,17,.12)}
 .qty-step span{min-width:1.4rem;text-align:center;font-weight:800}
 .card-actions.pair .qty-step{width:100%;height:40px}

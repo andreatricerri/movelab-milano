@@ -12,15 +12,15 @@
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Cache breve per CSS, JS e icone (si aggiornano a ogni deploy)
+# CSS e JS: il browser ricontrolla sempre la versione (i link hanno anche ?v=...)
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
 [[headers]]
   for = "/img/*"
   [headers.values]
